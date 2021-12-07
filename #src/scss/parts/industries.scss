@@ -1,0 +1,19 @@
+.industries {
+  &__container {
+    overflow: hidden;
+    @media (min-width: $md2+px)  {
+      display: flex;
+    }
+  }
+  &__img {
+    @media (min-width: $md2+px)  {
+      width: 45%;
+    }
+  }
+  &__content {
+    @media(min-width: $md2+px) {
+      width: calc(55% - 8rem);
+      margin-left: 8rem;
+    }
+  }
+}

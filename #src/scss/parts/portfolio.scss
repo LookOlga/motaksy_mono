@@ -1,0 +1,28 @@
+.portfolio {
+  &__container {
+    @media (min-width: $md2+px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__text {
+    @media (max-width: $md2+px) {
+      margin-bottom: 5rem;
+    }
+    @media (min-width: $md2+px) {
+      width: calc(55% - 8rem);
+      margin-right: 8rem;
+    }
+  }
+  &__img {
+    @media (min-width: $md2+px) {
+      width: 45%;
+    }
+  }
+  &__desc {
+    color: $textColor;
+  }
+  &__desc, &__title {
+    margin-bottom: 3rem;
+  }
+}

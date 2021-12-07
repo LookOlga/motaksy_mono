@@ -1,0 +1,8 @@
+.section-with-bg {
+  @media (min-width: $md3+px) {
+    padding: 12rem 0;
+  }
+  @media (max-width: $md3+px) {
+    padding: 7rem 0;
+  }
+}

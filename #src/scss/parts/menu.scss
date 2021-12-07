@@ -1,0 +1,128 @@
+//<MENU>====================================================================================================
+.menu {
+  &__body {
+    @media(max-width: $md3+px) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      overflow: auto;
+      transition: left 0.3s ease;
+      padding: 7rem 2rem 3rem;
+      &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 80px;
+        background-color: #fff;
+        transition: left 0.3s ease;
+      }
+    }
+  }
+  &__list {
+    @media (min-width:$md3+px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+  &__link, &__sub-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  &__link {
+    color: $headingColor;
+    @media(max-width: $md3 + px) {
+      font-size: 2rem;
+      padding: 1rem 0;
+    }
+  }
+
+  &__sub-link {
+    color: $textColor;
+    padding: 5px 0;
+    @media (any-hover: hover)  {
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+    @media(max-width: $md3 + px) {
+      font-size: 1.8rem;
+      padding: 1rem 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    padding: 5px 0;
+    @media (min-width: $md3+px) {
+      margin-right: 4rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @media(any-hover: hover) {
+      &:hover {
+        .menu__sub-list {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+        .menu__arrow {
+          transform: rotate(-45deg);
+          border-color: $primaryColor;
+        }
+        .menu__link {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+
+
+  &__arrow {
+    margin-left: 8px;
+  }
+  &__sub-list {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem 8px;
+    flex: 1 1 100%;
+    @media (min-width: $md3+px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 250px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      background-color: $whiteColor;
+      z-index: 20;
+    }
+  }
+  &__sub-item {
+    &:not(&:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+body.menu-active {
+  .menu__body {
+    left: 0;
+    &::before {
+      left: 0;
+    }
+  }
+}
+//</MENU>====================================================================================================

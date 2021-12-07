@@ -1,0 +1,20 @@
+.dev-time {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='470' preserveAspectRatio='none' viewBox='0 0 1920 470'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1062%26quot%3b)' fill='none'%3e%3crect width='1920' height='470' x='0' y='0' fill='rgba(83%2c 117%2c 188%2c 1)'%3e%3c/rect%3e%3cpath d='M -579.8416104924904%2c229 C -483.84%2c257.8 -291.84%2c398.4 -99.84161049249039%2c373 C 92.16%2c347.6 188.16%2c110.6 380.1583895075096%2c102 C 572.16%2c93.4 668.16%2c324.4 860.1583895075096%2c330 C 1052.16%2c335.6 1148.16%2c127 1340.1583895075096%2c130 C 1532.16%2c133 1704.19%2c353.2 1820.1583895075096%2c345 C 1936.13%2c336.8 1900.03%2c140.2 1920%2c89' stroke='rgba(255%2c 255%2c 255%2c 0.13)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -197.43066698509614%2c314 C -101.43%2c264 90.57%2c63.6 282.56933301490386%2c64 C 474.57%2c64.4 570.57%2c301 762.5693330149038%2c316 C 954.57%2c331 1050.57%2c133.2 1242.5693330149038%2c139 C 1434.57%2c144.8 1530.57%2c359 1722.5693330149038%2c345 C 1914.57%2c331 2163.08%2c69.2 2202.569333014904%2c69 C 2242.06%2c68.8 1976.51%2c289 1920%2c344' stroke='rgba(255%2c 255%2c 255%2c 0.13)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -668.7230189729733%2c107 C -572.72%2c138.8 -380.72%2c256 -188.72301897297325%2c266 C 3.28%2c276 99.28%2c162 291.27698102702675%2c157 C 483.28%2c152 579.28%2c243.8 771.2769810270267%2c241 C 963.28%2c238.2 1059.28%2c123.2 1251.2769810270267%2c143 C 1443.28%2c162.8 1597.53%2c324.4 1731.2769810270267%2c340 C 1865.02%2c355.6 1882.26%2c244.8 1920%2c221' stroke='rgba(255%2c 255%2c 255%2c 0.13)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1062'%3e%3crect width='1920' height='470' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+
+  &__title {
+    @media (min-width: $md2+px) {
+      width: calc(35% - 10rem);
+      margin-right: 10rem;
+    }
+  }
+  &__text {
+    @media (min-width: $md2+px) {
+      display: flex;
+    }
+  }
+  &__desc {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: $whiteColor;
+  }
+}
